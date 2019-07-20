@@ -1,0 +1,30 @@
+{
+  "name": "keylight",
+  "version": "1.0.0",
+  "description": "Highlight key content",
+  "main": "./dist/kl.umd.js",
+  "module": "./dist/kl.es.js",
+  "typings": "./index.d.ts",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "npm run build:umd && npm run build:es",
+    "build:umd": "rollup -c -f umd -o ./dist/kl.umd.js",
+    "build:es": "rollup -c -f es -o ./dist/kl.es.js",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "keywords": [
+    "highlight",
+    "keyword",
+    "typescript"
+  ],
+  "author": "naecoo",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.17.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}

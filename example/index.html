@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../dist/kl.js"></script>
+  <style>
+    .container{
+      width: 500px;
+      height: 200px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .input{
+      margin-top: 20px;
+    }
+    .display{
+      margin-top: 30px;
+      padding: 10px 15px;
+      border: 1px solid silver;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="input" class="input">
+    <input type="color" id="color">
+    <div class="display" id="display"></div>
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    var input = document.querySelector('#input')
+    var display = document.querySelector('#display')
+    var color = document.querySelector('#color')
+
+    var rgb = 'red'
+    var kl = new keyLight('red', {
+      customCSS: 'hl'
+    })
+    var content = "Then you’re going to push through. So knowing that it’s not really about having the willpower to bring yourself back around to what you should be focused on, but rather, making sure that the thing you’re supposed to be focused on is exciting to you, then you’re gonna be able to make it."
+    display.innerHTML = content
+
+    color.addEventListener('change', function(e){
+      kl.color = e.target.value.toString()
+      var c = kl.match(content, input.value, filter)
+      display.innerHTML = c
+    })
+    input.addEventListener('input', function(e){
+      var c = kl.match(content, e.target.value.toString(), filter)
+      display.innerHTML = c
+    })
+
+    function filter (val) {
+      return val
+    }
+  }
+</script>
+</html>

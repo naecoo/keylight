@@ -1,0 +1,23 @@
+{
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "no-console": false,
+    "object-literal-sort-keys": false,
+    "member-access": false,
+    "ordered-imports": false,
+    "triple-equals": true,
+    "semicolon": false,
+    "quotemark": [true, "single", "jsx-double", "avoid-template", "avoid-escape"],
+    "space-before-function-paren": [true, "asyncArrow"],
+    "interface-name": false,
+    "max-line-length": false,
+    "indent": [
+      true,
+      "spaces",
+      2
+    ]
+  },
+  "linterOptions": {
+    "exclude": ["**/*.json", "node_modules"]
+  }
+}
