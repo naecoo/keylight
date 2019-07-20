@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Highlight key content",
   "main": "./dist/kl.umd.js",
+  "homepage": "https://github.com/naecoo/keylight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naecoo/keylight.git"
+  },
   "module": "./dist/kl.es.js",
   "typings": "./index.d.ts",
   "scripts": {
